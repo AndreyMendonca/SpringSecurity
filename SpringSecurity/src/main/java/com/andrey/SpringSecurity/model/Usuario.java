@@ -23,12 +23,16 @@ public class Usuario {
     @Column
     private String senha;
 
+    @Column
+    private String role;
+
     public Usuario(){}
 
-    public Usuario(UUID id, String login, String senha) {
+    public Usuario(UUID id, String login, String senha, String role) {
         this.id = id;
         this.login = login;
         this.senha = senha;
+        this.role = role;
     }
 
     public UUID getId() {
@@ -54,5 +58,13 @@ public class Usuario {
 
     public void setSenha(String senha) {
         this.senha = senha;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
     }
 }
